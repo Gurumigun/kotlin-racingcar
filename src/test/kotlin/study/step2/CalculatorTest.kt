@@ -12,30 +12,30 @@ class CalculatorTest : StringSpec({
     val calculator = Calculator()
 
     "덧셈 연산 테스트" {
-        calculator("1 + 2").shouldBe(CalculationState.Success(CalculationResult(3.0)))
-        calculator("10 + 20").shouldBe(CalculationState.Success(CalculationResult(30.0)))
+        calculator("1 + 2") shouldBe CalculationState.Success(CalculationResult(3.0))
+        calculator("10 + 20") shouldBe CalculationState.Success(CalculationResult(30.0))
     }
 
     "뺄셈 연산 테스트" {
-        calculator("3 - 2").shouldBe(CalculationState.Success(CalculationResult(1.0)))
-        calculator("3.5 - 1.5").shouldBe(CalculationState.Success(CalculationResult(2.0)))
+        calculator("3 - 2") shouldBe CalculationState.Success(CalculationResult(1.0))
+        calculator("3.5 - 1.5") shouldBe CalculationState.Success(CalculationResult(2.0))
     }
 
     "곱셈 연산 테스트" {
-        calculator("2 * 3").shouldBe(CalculationState.Success(CalculationResult(6.0)))
-        calculator("1.5 * 2").shouldBe(CalculationState.Success(CalculationResult(3.0)))
-        calculator("2 * 2 * 2").shouldBe(CalculationState.Success(CalculationResult(8.0)))
+        calculator("2 * 3") shouldBe CalculationState.Success(CalculationResult(6.0))
+        calculator("1.5 * 2") shouldBe CalculationState.Success(CalculationResult(3.0))
+        calculator("2 * 2 * 2") shouldBe CalculationState.Success(CalculationResult(8.0))
     }
 
     "나눗셈 연산 테스트" {
-        calculator("6 / 2").shouldBe(CalculationState.Success(CalculationResult(3.0)))
-        calculator("3 / 1.5").shouldBe(CalculationState.Success(CalculationResult(2.0)))
+        calculator("6 / 2") shouldBe CalculationState.Success(CalculationResult(3.0))
+        calculator("3 / 1.5") shouldBe CalculationState.Success(CalculationResult(2.0))
     }
 
     "복합 연산 테스트" {
-        calculator("1 + 2 * 3").shouldBe(CalculationState.Success(CalculationResult(9.0)))
-        calculator("10 - 5 * 2").shouldBe(CalculationState.Success(CalculationResult(10.0)))
-        calculator("6 / 2 + 1").shouldBe(CalculationState.Success(CalculationResult(4.0)))
+        calculator("1 + 2 * 3") shouldBe CalculationState.Success(CalculationResult(9.0))
+        calculator("10 - 5 * 2") shouldBe CalculationState.Success(CalculationResult(10.0))
+        calculator("6 / 2 + 1") shouldBe CalculationState.Success(CalculationResult(4.0))
     }
 
     "빈 입력 테스트" {

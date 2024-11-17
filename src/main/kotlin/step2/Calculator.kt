@@ -10,8 +10,7 @@ class Calculator {
         }.getOrElse { CalculationState.Error(it.message ?: "알 수 없는 오류가 발생했습니다") }
 
     private fun List<String>.validateTokens(): List<String> {
-        require(size >= 3) { "올바르지 않은 수식 형식입니다" }
-        require(size % 2 == 1) { "올바르지 않은 수식 형식입니다" }
+        require(size >= 3 && size % 2 == 1) { "올바르지 않은 수식 형식입니다" }
         return this
     }
 
